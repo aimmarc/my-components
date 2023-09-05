@@ -1,8 +1,9 @@
 import buildReact from './react.js';
 import buildUtils from './buildUtils.js';
+import { buildVue2 } from './vue2.js';
 
 function build() {
-    console.log(process.env.NODE_ENV);
+    console.log('env', process.env.NODE_ENV);
     // rmdirALL(path.resolve(PACKAGES_PATH, 'components-react', 'lib'), {
     //     force: true,
     // });
@@ -11,6 +12,7 @@ function build() {
             buildReact();
             break;
         case 'vue2':
+            buildVue2();
             break;
         case 'vue3':
             break;

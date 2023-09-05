@@ -1,9 +1,9 @@
 import { PACKAGES_PATH } from './common/constant.js';
 import path from 'path';
-import { buildCommon } from './common/utils.js';
+import { buildRollupCommon } from './common/utils.js';
 
 export default function buildUtils() {
-    buildCommon({
+    buildRollupCommon({
         input: path.resolve(PACKAGES_PATH, 'utils', 'index.ts'),
         outputDir: path.resolve(PACKAGES_PATH, 'utils', 'lib'),
     });

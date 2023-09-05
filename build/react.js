@@ -1,44 +1,17 @@
 import * as rollup from 'rollup';
 import { PACKAGES_PATH } from './common/constant.js';
 import path from 'path';
-import { defaultPlugin } from './common/plugin.js';
-import { babel } from '@rollup/plugin-babel';
+import { reactPlugin } from './common/plugin.js';
 import componentsJson from '../packages/components-react/components.js';
 
 const components = Object.keys(componentsJson);
 const plugins = [
-    ...defaultPlugin(),
-    babel({
-        babelHelpers: 'runtime',
-        presets: [
-            [
-                '@babel/preset-env',
-                {
-                    targets: {
-                        browsers: ['> 1%', 'last 2 versions', 'not ie <= 8'],
-                    },
-                },
-            ],
-            '@babel/preset-react',
-        ],
-        compact: false,
-        babelrc: false,
-        plugins: [
-            [
-                '@babel/plugin-transform-runtime',
-                {
-                    corejs: { version: 3 },
-                },
-            ],
-            '@babel/plugin-transform-react-jsx',
-        ],
-        extensions: ['.js', '.jsx', '.ts', '.tsx', '.es6', '.es', '.mjs'],
-    }),
+    ...reactPlugin(),
     // typescript({
     //     outDir: path.resolve(PACKAGES_PATH, 'components-react', 'lib', 'index.d.ts'),
     // }),
 ];
-const external = ['react', 'react-dom'];
+const external = ['react', 'react-dom', '@mycomponent/utils'];
 
 const inputOptions = {
     input: path.resolve(PACKAGES_PATH, 'components-react', 'index.ts'),

@@ -24,11 +24,11 @@ export function rmdirALL(path) {
         // 遍历完成之后 删除最外层的文件
         fs.rmdirSync(path);
     } catch (err) {
-        console.log(err);
+        // console.log(err);
     }
 }
 
-export async function buildCommon({
+export async function buildRollupCommon({
     input = {},
     plugins = defaultPlugin(),
     formats = ['es'],
