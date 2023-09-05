@@ -1,0 +1,7 @@
+node_modules/
+dist/
+index.html
+src/typings/*
+build/*
+config/*
+mock/*
