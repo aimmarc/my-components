@@ -62,7 +62,8 @@
     "webpack": "^5.75.0",
     "webpack-merge": "^5.8.0",
     "@mycomponent/react": "workspace:^0.0.1",
-    "@mycomponent/utils": "workspace:^0.0.1"
+    "@mycomponent/utils": "workspace:^0.0.1",
+    "@mycomponent/my-recoil": "workspace:^0.0.1"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.1.0",

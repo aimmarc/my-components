@@ -10,7 +10,8 @@
     "play:vue2": "pnpm --filter vue2-playground dev",
     "build:react": "cross-env NODE_ENV=react pnpm --filter build build",
     "build:utils": "cross-env NODE_ENV=utils pnpm --filter build build",
-    "build:vue2": "cross-env NODE_ENV=vue2 pnpm --filter build build"
+    "build:vue2": "cross-env NODE_ENV=vue2 pnpm --filter build build",
+    "build:recoil": "cross-env NODE_ENV=recoil pnpm --filter build build"
   },
   "keywords": [],
   "author": "",

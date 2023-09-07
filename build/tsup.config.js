@@ -2,6 +2,7 @@ import { defineConfig } from 'tsup';
 import { dtsConfigReact } from './react';
 import { dtsConfigUtils } from './buildUtils';
 import { dtsConfigVue2 } from './vue2';
+import { dtsConfigRecoil } from './buildRecoil';
 
 let config = {};
 
@@ -14,6 +15,9 @@ switch (process.env.NODE_ENV) {
         break;
     case 'vue2':
         config = defineConfig(dtsConfigVue2);
+        break;
+    case 'recoil':
+        config = defineConfig(dtsConfigRecoil);
         break;
 }
 

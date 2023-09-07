@@ -55,31 +55,31 @@ export function vue2Plugin(sourceRoot) {
 export function reactPlugin() {
     return [
         ...defaultPlugin(),
-        babel({
-            babelHelpers: 'runtime',
-            presets: [
-                [
-                    '@babel/preset-env',
-                    {
-                        targets: {
-                            browsers: ['> 1%', 'last 2 versions', 'not ie <= 8'],
-                        },
-                    },
-                ],
-                '@babel/preset-react',
-            ],
-            compact: false,
-            babelrc: false,
-            plugins: [
-                [
-                    '@babel/plugin-transform-runtime',
-                    {
-                        corejs: { version: 3 },
-                    },
-                ],
-                '@babel/plugin-transform-react-jsx',
-            ],
-            extensions: ['.js', '.jsx', '.ts', '.tsx', '.es6', '.es', '.mjs'],
-        }),
+        // babel({
+        //     babelHelpers: 'runtime',
+        //     presets: [
+        //         [
+        //             '@babel/preset-env',
+        //             {
+        //                 targets: {
+        //                     browsers: ['> 1%', 'last 2 versions', 'not ie <= 8'],
+        //                 },
+        //             },
+        //         ],
+        //         '@babel/preset-react',
+        //     ],
+        //     compact: false,
+        //     babelrc: false,
+        //     plugins: [
+        //         [
+        //             '@babel/plugin-transform-runtime',
+        //             {
+        //                 corejs: { version: 3 },
+        //             },
+        //         ],
+        //         '@babel/plugin-transform-react-jsx',
+        //     ],
+        //     extensions: ['.js', '.jsx', '.ts', '.tsx', '.es6', '.es', '.mjs'],
+        // }),
     ];
 }

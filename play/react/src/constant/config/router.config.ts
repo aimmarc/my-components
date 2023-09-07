@@ -43,6 +43,12 @@ const routerConfig: IRouterConfig[] = [
                 component: '/button/index',
             },
             {
+                name: 'myRecoil',
+                path: '/myRecoil/index',
+                icon: 'FormOutlined',
+                component: '/myRecoil/index',
+            },
+            {
                 name: '表单',
                 path: '/form',
                 icon: 'FormOutlined',
