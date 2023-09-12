@@ -1,5 +1,5 @@
-import { createStore } from './common/createStore';
+import { createStore } from './createStore';
 
 export { createStore };
 
-export * from './common/createStore';
+export * from './createStore';
