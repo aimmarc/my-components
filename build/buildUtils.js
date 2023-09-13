@@ -2,19 +2,22 @@ import { PACKAGES_PATH } from './common/constant.js';
 import path from 'path';
 import { buildRollupCommon } from './common/utils.js';
 
+const outDir = path.resolve(PACKAGES_PATH, 'utils', 'lib');
+const input = path.resolve(PACKAGES_PATH, 'utils', 'index.ts');
+
 export default function buildUtils() {
     buildRollupCommon({
-        input: path.resolve(PACKAGES_PATH, 'utils', 'index.ts'),
-        outputDir: path.resolve(PACKAGES_PATH, 'utils', 'lib'),
+        input: input,
+        outputDir: outDir,
     });
 }
 
 export const dtsConfigUtils = {
-    entry: [path.resolve(PACKAGES_PATH, 'utils', 'index.ts')],
+    entry: [input],
     format: 'esm',
-    outDir: path.resolve(PACKAGES_PATH, 'utils', 'lib'),
+    outDir: outDir,
     dts: {
-        entry: [path.resolve(PACKAGES_PATH, 'utils', 'index.ts')],
-        outDir: path.resolve(PACKAGES_PATH, 'utils', 'lib'),
+        entry: [input],
+        outDir: outDir,
     },
 };
