@@ -4,7 +4,6 @@ import extensions from 'rollup-plugin-extensions';
 import commonjs from '@rollup/plugin-commonjs';
 import url from '@rollup/plugin-url';
 import vue2 from 'rollup-plugin-vue';
-import { babel } from '@rollup/plugin-babel';
 
 export function defaultPlugin() {
     return [

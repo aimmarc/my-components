@@ -5,7 +5,7 @@ import { reactPlugin } from './common/plugin.js';
 
 const plugins = [...reactPlugin()];
 const external = ['react', 'react-dom', '@mycomponent/utils'];
-const recoilPath = 'my-recoil/src';
+const recoilPath = 'my-hox/src';
 
 const inputOptions = {
     input: path.resolve(PACKAGES_PATH, recoilPath, 'index.ts'),

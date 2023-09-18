@@ -16,7 +16,7 @@ switch (process.env.NODE_ENV) {
     case 'vue2':
         config = defineConfig(dtsConfigVue2);
         break;
-    case 'recoil':
+    case 'hox':
         config = defineConfig(dtsConfigRecoil);
         break;
 }

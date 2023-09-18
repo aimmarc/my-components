@@ -20,7 +20,7 @@ function build() {
         case 'utils':
             buildUtils();
             break;
-        case 'recoil':
+        case 'hox':
             buildRecoil();
             break;
     }

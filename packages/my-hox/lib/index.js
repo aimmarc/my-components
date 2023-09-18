@@ -1,4 +1,4 @@
-import React, { createContext, memo, useContext, useState, useEffect } from 'react';
+import React, { createContext, memo, useContext } from 'react';
 
 function createStore(cb) {
   const storeContext = createContext({});
@@ -25,15 +25,7 @@ function createStore(cb) {
   };
   function useStore() {
     const context = useContext(storeContext);
-    const [c, setC] = useState(context);
-    console.log("context", context);
-    useEffect(() => {
-      setTimeout(() => {
-        console.log("change", context);
-      });
-      setC(context);
-    }, [context]);
-    return c;
+    return context;
   }
   return [useStore, memo(StoreProvider)];
 }
