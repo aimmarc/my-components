@@ -1,7 +1,7 @@
 import MyButton from './src/button';
 import MyInput from './src/input';
 
-const components = [MyButton, MyInput];
+export const components = [MyButton, MyInput];
 
 const install = function (app: any) {
     components.forEach((com) => {
