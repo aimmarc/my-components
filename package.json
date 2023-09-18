@@ -9,8 +9,9 @@
     "play:vue3": "pnpm --filter vue3-playground dev",
     "play:vue2": "pnpm --filter vue2-playground dev",
     "build:react": "cross-env NODE_ENV=react pnpm --filter build build",
-    "build:utils": "cross-env NODE_ENV=utils pnpm --filter build build",
     "build:vue2": "cross-env NODE_ENV=vue2 pnpm --filter build build",
+    "build:vue3": "cross-env pnpm --filter buildVue3 build",
+    "build:utils": "cross-env NODE_ENV=utils pnpm --filter build build",
     "build:hox": "cross-env NODE_ENV=hox pnpm --filter build build"
   },
   "keywords": [],

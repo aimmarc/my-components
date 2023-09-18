@@ -1,6 +1,5 @@
 import { buildRollupCommon } from './common/utils.js';
 import { PACKAGES_PATH } from './common/constant.js';
-import components from '../packages/components-vue2/components.js';
 import path from 'path';
 import { vue3Plugin } from './common/plugin.js';
 
@@ -9,7 +8,7 @@ export function buildVue3() {
         input: path.resolve(PACKAGES_PATH, 'components-vue3', 'index.ts'),
         outputDir: path.resolve(PACKAGES_PATH, 'components-vue3', 'lib'),
         external: ['vue'],
-        plugins: [...vue3Plugin(path.resolve(PACKAGES_PATH, 'components-vue2', 'index.js'))],
+        plugins: [...vue3Plugin()],
     });
 }
 
@@ -36,3 +35,5 @@ export const dtsConfigVue3 = {
         outDir: path.resolve(PACKAGES_PATH, 'components-vue3', 'lib'),
     },
 };
+
+buildVue3();

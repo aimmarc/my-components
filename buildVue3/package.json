@@ -1,12 +1,12 @@
 {
-  "name": "build",
+  "name": "buildVue3",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node build.js && tsup --dts-only"
+    "build": "node build.js && rollup -c dts.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
@@ -24,10 +24,11 @@
     "rollup-plugin-esbuild": "^5.0.0",
     "rollup-plugin-extensions": "^0.1.0",
     "rollup-plugin-typescript2": "^0.35.0",
-    "rollup-plugin-vue": "^5.1.9",
+    "rollup-plugin-vue": "6.0.0-beta.10",
     "tsup": "^7.2.0",
     "unplugin-vue": "^4.3.5",
-    "vue": "^2.7.14",
-    "vue-template-compiler": "^2.7.14"
+    "unplugin-vue-jsx": "^0.2.2",
+    "vue": "3.3.4",
+    "vue-template-compiler": "~2.6.14"
   }
 }

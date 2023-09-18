@@ -4,6 +4,7 @@ import extensions from 'rollup-plugin-extensions';
 import commonjs from '@rollup/plugin-commonjs';
 import url from '@rollup/plugin-url';
 import vue2 from 'rollup-plugin-vue';
+import vue3 from "unplugin-vue/rollup";
 
 export function defaultPlugin() {
     return [
@@ -49,6 +50,13 @@ export function vue2Plugin(sourceRoot) {
         //     extensions: ['.js', '.jsx', '.vue', '.ts', '.tsx', '.es6', '.es', '.mjs'],
         // }),
     ];
+}
+
+export function vue3Plugin() {
+    return [
+        ...defaultPlugin(),
+        vue3(),
+    ]
 }
 
 export function reactPlugin() {

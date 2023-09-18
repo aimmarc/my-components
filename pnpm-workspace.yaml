@@ -5,3 +5,4 @@ packages:
   - 'play/*'
   - 'play/**'
   - 'build'
+  - 'buildVue3'

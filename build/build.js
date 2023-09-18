@@ -2,6 +2,7 @@ import buildReact from './react.js';
 import buildUtils from './buildUtils.js';
 import { buildVue2 } from './vue2.js';
 import buildRecoil from './buildRecoil.js';
+import { buildVue3 } from './vue3.js';
 
 function build() {
     console.log('env', process.env.NODE_ENV);
@@ -16,6 +17,7 @@ function build() {
             buildVue2();
             break;
         case 'vue3':
+            buildVue3();
             break;
         case 'utils':
             buildUtils();
